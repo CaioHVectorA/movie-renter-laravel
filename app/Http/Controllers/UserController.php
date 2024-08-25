@@ -12,6 +12,11 @@ class UserController extends Controller {
     }
     public function create(Request $request) {
         $user = new User();
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required'
+        ]);
         $user->name = $request::input('name');
         $user->email = $request::input('email');
         $user->password = bcrypt($request::input('password'));
