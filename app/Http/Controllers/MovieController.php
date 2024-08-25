@@ -12,6 +12,18 @@ class MovieController extends Controller {
     }
     public function create(Request $request) {
         $movie = new Movie();
+        $request->validate([
+            'title' => 'required',
+            'director' => 'required',
+            'release_date' => 'required|date',
+            'genre' => 'required'
+        ], [
+            'release_date.required' => 'A data de lançamento é obrigatória',
+            'release_date.date' => 'A data de lançamento deve ser uma data válida',
+            'title.required' => 'O título é obrigatório',
+            'director.required' => 'O diretor é obrigatório',
+            'genre.required' => 'O gênero é obrigatório'
+        ]);
         $movie->title = $request::input('title');
         $movie->director = $request::input('director');
         $movie->releaseDate = $request::input('release_date');

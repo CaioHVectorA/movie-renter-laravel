@@ -16,6 +16,12 @@ class UserController extends Controller {
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required'
+        ], [
+            'name.required' => 'O nome é obrigatório',
+            'email.required' => 'O e-mail é obrigatório',
+            'email.email' => 'O e-mail deve ser um e-mail válido',
+            'email.unique' => 'Este e-mail já está em uso',
+            'password.required' => 'A senha é obrigatória'
         ]);
         $user->name = $request::input('name');
         $user->email = $request::input('email');
