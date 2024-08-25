@@ -24,10 +24,10 @@ class MovieController extends Controller {
             'director.required' => 'O diretor é obrigatório',
             'genre.required' => 'O gênero é obrigatório'
         ]);
-        $movie->title = $request::input('title');
-        $movie->director = $request::input('director');
-        $movie->releaseDate = $request::input('release_date');
-        $movie->genre = $request::input('genre');
+        $movie->title = $request->input('title');
+        $movie->director = $request->input('director');
+        $movie->release_date = $request->input('release_date');
+        $movie->genre = $request->input('genre');
         $movie->save();
         return response()->json($movie);
     }
