@@ -1,8 +1,10 @@
 <?php
 
 namespace Database\Seeders;
-
 use App\Models\Movie;
+use App\Models\MovieRent;
+use Faker\Factory as Faker;
+
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -12,37 +14,33 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
-    public function run(): void
-    {
-        // User::factory(10)->create();
+    public function run(): void {
+        $faker = Faker::create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-        Movie::factory()->create([
-            'title' => 'The Shawshank Redemption',
-            'director' => 'Frank Darabont',
-            'release_date' => '1994-09-23',
-            'genre' => 'Drama',
-        ]);
-        Movie::factory()->create([
-            'title' => 'The Godfather',
-            'director' => 'Francis Ford Coppola',
-            'release_date' => '1972-03-24',
-            'genre' => 'Crime',
-        ]);
-        Movie::factory()->create([
-            'title' => 'The Dark Knight',
-            'director' => 'Christopher Nolan',
-            'release_date' => '2008-07-18',
-            'genre' => 'Action',
-        ]);
-        Movie::factory()->create([
-            'title' => '12 Angry',
-            'director' => 'Sidney Lumet',
-            'release_date' => '1957-04-10',
-            'genre' => 'Drama',
-        ]);
+        foreach (range(1, 200) as $index) {
+            User::create([
+                'name' => $faker->name,
+                'email' => $faker->unique()->safeEmail,
+                'password' => bcrypt('password'),
+            ]);
+        }
+        foreach (range(1, 200) as $index) {
+            Movie::create([
+                'title' => $faker->sentence(3),
+                'director' => $faker->name,
+                'release_date' => $faker->date(),
+                'genre' => $faker->word,
+            ]);
+        }
+        $movies = Movie::all();
+        $users = User::all();
+        foreach (range(1, 200) as $index) {
+            MovieRent::create([
+                'movie_id' => $movies->random()->id,
+                'user_id' => $users->random()->id,
+                'rented_at' => $faker->dateTimeBetween('-1 year', 'now'),
+                'returned_at' => $faker->dateTimeBetween('now', '+1 year'),
+            ]);
+        }
     }
 }
