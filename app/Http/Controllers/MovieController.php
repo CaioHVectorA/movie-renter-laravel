@@ -6,8 +6,10 @@ use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller {
-    public function index() {
-        $movies = Movie::all();
+    public function index(Request $request) {
+        $page = $request->query('page', 1);
+        $limit = 20;
+        $movies = Movie::paginate($limit, ["id","created_at", "title", "genre", "release_date"], 'page', $page);
         return response()->json($movies);
     }
     public function create(Request $request) {
