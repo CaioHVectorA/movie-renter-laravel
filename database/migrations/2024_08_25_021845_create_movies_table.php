@@ -16,8 +16,12 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->date('release_date');
-            $table->string('genre');
             $table->string('director');
+            $table->string('image_url');
+            $table->float('rating');
+            $table->integer('popularity');
+            $table->integer('pricing_per_day');
+            $table->text('sinopsis');
         });
     }
 

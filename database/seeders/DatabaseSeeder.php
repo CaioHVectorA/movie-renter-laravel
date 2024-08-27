@@ -24,14 +24,14 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('password'),
             ]);
         }
-        foreach (range(1, 200) as $index) {
-            Movie::create([
-                'title' => $faker->sentence(3),
-                'director' => $faker->name,
-                'release_date' => $faker->date(),
-                'genre' => $faker->word,
-            ]);
-        }
+        // foreach (range(1, 200) as $index) {
+        //     Movie::create([
+        //         'title' => $faker->sentence(3),
+        //         'director' => $faker->name,
+        //         'release_date' => $faker->date(),
+        //         'genre' => $faker->word,
+        //     ]);
+        // }
         $movies = Movie::all();
         $users = User::all();
         foreach (range(1, 200) as $index) {
