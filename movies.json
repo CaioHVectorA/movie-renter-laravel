@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Alien: Romulus",
+    "release_date": "15 de agosto de 2024",
+    "rating": 7.4,
+    "director": "Fede Alvarez",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BMmZlNjI1ZGYtNTU2Ni00NzhiLWIxM2MtYzRjZWMzZjFmYjk0XkEyXkFqcGc@._V1_QL75_UY281_CR1,0,190,281_.jpg",
+    "popularity": 1,
+    "pricing_per_day": 5,
+    "sinopsis": "Enquanto exploram as profundezas de uma estação espacial abandonada, um grupo de jovens colonizadores espaciais se depara com a forma de vida mais aterrorizante do universo."
+  },
+  {
+    "title": "Deadpool & Wolverine",
+    "release_date": "25 de julho de 2024",
+    "rating": 8,
+    "director": "Shawn Levy",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BNTI2NjY3ZTMtOTY3Ni00MjRiLWJjOGUtZTVmNDNmY2U5N2JiXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+    "popularity": 2,
+    "pricing_per_day": 5,
+    "sinopsis": "Deadpool recebe uma oferta da Autoridade de Variância Temporal para se juntar ao Universo Cinematográfico Marvel, mas em vez disso recruta uma variante do Wolverine para salvar seu universo ... Ler tudo"
+  },
+  {
+    "title": "A Liga",
+    "release_date": "16 de agosto de 2024",
+    "rating": 5.5,
+    "director": "Julian Farino",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BY2I0YmNiNmEtNWI2My00NDU5LWIwZWItNWNkNjFmYWJjNTMxXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+    "popularity": 3,
+    "pricing_per_day": 5,
+    "sinopsis": "Mike, um trabalhador da construção civil de Jersey, é rapidamente empurrado para o mundo dos superespiões e agentes secretos quando sua ex-namorada de colégio, Roxanne, o recruta para uma mi... Ler tudo"
+  },
+  {
+    "title": "É Assim que Acaba",
+    "release_date": "8 de agosto de 2024",
+    "rating": 6.8,
+    "director": "Justin Baldoni",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BNzJjNzQ1N2EtZmFlOS00ODdhLTkwNDAtZjM0NmU5MzI0MjljXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+    "popularity": 4,
+    "pricing_per_day": 5,
+    "sinopsis": "Quando o primeiro amor de uma mulher reaparece em sua vida, seu relacionamento com um charmoso, mas abusivo neurocirurgião é abalado e ela percebe que deve aprender a confiar em sua própria ... Ler tudo"
+  },
+  {
+    "title": "Furiosa: Uma Saga Mad Max",
+    "release_date": "23 de maio de 2024",
+    "rating": 7.6,
+    "director": "George Miller",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BMTUxNDc4ZDktZDFhNi00Y2NlLTkxMDctMWVmYTQ0ODJjYWUzXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+    "popularity": 5,
+    "pricing_per_day": 5,
+    "sinopsis": "Após ser sequestrada do Vale Verde das Muitas Mães, enquanto os tiranos Dementus e Immortan Joe lutam por poder e controle, a jovem Furiosa terá que sobreviver a muitos desafios para encontr... Ler tudo"
+  }
+]
