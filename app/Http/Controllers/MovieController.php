@@ -12,6 +12,14 @@ class MovieController extends Controller {
         $movies = Movie::paginate($limit, ["*"], 'page', $page);
         return response()->json($movies);
     }
+    public function show($id) {
+        // convert id string to id integer
+        $movie = Movie::find((int)$id);
+        if (!$movie) {
+            return response()->json(['message' => 'Movie not found'], 404);
+        }
+        return response()->json($movie);
+    }
     public function create(Request $request) {
         $movie = new Movie();
         $request->validate([

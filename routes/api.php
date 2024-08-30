@@ -13,6 +13,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->patch('/user/update/', [UserController::class, 'update']);
 Route::middleware('auth:sanctum')->delete('/user/delete/', [UserController::class, 'delete']);
 Route::get('/movies', [MovieController::class, 'index']);
+Route::get('/movie/{id}', [MovieController::class, 'show']);
 Route::middleware('auth:sanctum')->post('/movie/create', [MovieController::class, 'create']);
 Route::middleware('auth:sanctum')->patch('/movie/update/{id}', [MovieController::class, 'update']);
 Route::middleware('auth:sanctum')->delete('/movie/delete/{id}', [MovieController::class, 'delete']);
