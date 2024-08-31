@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class MovieController extends Controller {
     public function index(Request $request) {
@@ -18,7 +19,12 @@ class MovieController extends Controller {
         if (!$movie) {
             return response()->json(['message' => 'Movie not found'], 404);
         }
-        return response()->json($movie);
+        Log::info('Movie found: ', ["movie" => $movie->pricing_per_day]);
+        $response = [
+            'movie' => $movie,
+            'rental_options' => calculateRentalOptions($movie)
+        ];
+        return response()->json($response);
     }
     public function create(Request $request) {
         $movie = new Movie();
